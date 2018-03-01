@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="2.4" 
+    xmlns="http://java.sun.com/xml/ns/j2ee" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+    http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+  <context-param>
+  <param-name>fname</param-name>
+  <param-value>jayant</param-value>
+  </context-param>
+  <context-param>
+  <param-name>lname</param-name>
+  <param-value>likhar</param-value>
+  </context-param>
+  <servlet>
+    <servlet-name>login</servlet-name>
+    <servlet-class>first.LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>addition</servlet-name>
+    <servlet-class>first.Addition</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>homepage</servlet-name>
+    <servlet-class>first.HomePageServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>logout</servlet-name>
+    <servlet-class>first.LogoutServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>login</servlet-name>
+    <url-pattern>/loginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>logout</servlet-name>
+    <url-pattern>/logoutServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>addition</servlet-name>
+    <url-pattern>/additionServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>homepage</servlet-name>
+    <url-pattern>/homepage</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+  	<welcome-file>login.jsp</welcome-file>
+  		<!-- <welcome-file>additionview.jsp</welcome-file> -->
+  </welcome-file-list>
+</web-app>
